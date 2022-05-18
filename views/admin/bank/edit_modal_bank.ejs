@@ -1,0 +1,40 @@
+<!-- Modal -->
+<div class="modal fade" id="editModalBank" tabindex="-1" role="dialog" aria-labelledby="editModalBankLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form action="/admin/bank?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalBankLabel">Edit Bank</h5>
+                    <button type="button" class="close" d ata-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" class="id" name="id">
+                    <div class="form-group">
+                        <label for="nameBank">Name Bank</label>
+                        <input type="text" name="nameBank" class="form-control nameBank" id="nameBank" placeholder="Input name bank" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nomorRekening">Nomor Rekening</label>
+                        <input type="text" name="nomorRekening" class="form-control nomorRekening" id="nomorRekening" placeholder="Input nomor rekening" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" class="form-control name" id="name" placeholder="Input name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Image</label>
+                        <input type="file" name="image" class="form-control" id="image" placeholder="Input image">
+                        <span>Pilih gambar untuk update image</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

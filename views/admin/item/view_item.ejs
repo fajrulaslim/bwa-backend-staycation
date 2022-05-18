@@ -1,0 +1,55 @@
+<%- include('../../partials/header.ejs')  %>
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <%- include('../../partials/sidebar.ejs')  %>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <%- include('../../partials/navbar.ejs')  %>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+          
+          <%- include('../../partials/message.ejs')  %>
+
+          <!-- Page Heading -->
+          <h1 class="h3 mb-4 text-gray-800">Item</h1>
+
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active" id="nav-show-item-tab" data-toggle="tab" href="#nav-show-item" role="tab" aria-controls="nav-show-item" aria-selected="true">Show Item</a>
+              <a class="nav-item nav-link" id="nav-add-item-tab" data-toggle="tab" href="#nav-add-item" role="tab" aria-controls="nav-add-item" aria-selected="false">Add Item</a>
+            </div>
+          </nav>
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-show-item" role="tabpanel" aria-labelledby="nav-show-item-tab">
+              <%- include('table_item.ejs')  %>
+            </div>
+            <div class="tab-pane fade" id="nav-add-item" role="tabpanel" aria-labelledby="nav-add-item-tab">
+              <%- include('add_item.ejs')  %>
+            </div>
+          </div>
+
+          
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+    <%- include('../../partials/footer.ejs')  %>
+
+    <script>
+      CKEDITOR.replace('description')
+    </script>
