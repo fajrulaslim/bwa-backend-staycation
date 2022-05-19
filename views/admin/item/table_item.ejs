@@ -20,14 +20,23 @@
               <tr>
                 <td width="2%" class="text-center"><%= i+1 %></td>
                 <td><%= item[i].title %></td>
-                <td><%= item[i].price %></td>
+                <td>$ <%= item[i].price %></td>
                 <td><%= item[i].country %></td>
                 <td><%= item[i].city %></td>
                 <td>
-                  <form action="/admin/item/<%= item[i]._id %>?_method=DELETE" method="POST">
-                    <a href="javascript:void(0)" type="button" class="btn btn-sm btn-warning btn-circle btn-update" data-id="<%= item[i]._id %>" data-title="<%= item[i].title %>" data-price="<%= item[i].price %>" data-country="<%= item[i].country %>" data-city="<%= item[i].city %>"><i class="fas fa-edit"></i></a>
-
-                    <button type="submit" class="btn btn-sm btn-danger btn-circle"><i class="fas fa-trash"></i></button>
+                  <form action="/admin/item/<%= item[i]._id %>/delete?_method=DELETE" method="POST">
+                    <a href="/admin/item/show-image/<%= item[i]._id %>" class="btn btn-sm btn-info btn-circle">
+                      <i class="fas fa-image"></i>
+                    </a>
+                    <a href="/admin/item/<%= item[i]._id %>" class="btn btn-sm btn-warning btn-circle">
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <button type="submit" class="btn btn-sm btn-danger btn-circle">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                    <a href="/admin/item/detail-item/<%= item[i]._id %>" class="btn btn-sm btn-success btn-circle">
+                      <i class="fas fa-plus"></i>
+                    </a>
                   </form>
                 </td>
               </tr>

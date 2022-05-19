@@ -34,14 +34,14 @@ const itemSchema = new mongoose.Schema({
         type: ObjectId,
         ref: 'Image'
     }],
-    featureId: {
+    featureId: [{
         type: ObjectId,
         ref: 'Feature'
-    },
-    activityId: {
+    }],
+    activityId: [{
         type: ObjectId,
         ref: 'Activity'
-    }
+    }]
 })
 
 module.exports = mongoose.model('Item', itemSchema)
